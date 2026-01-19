@@ -10,7 +10,7 @@ led = RGBLED(red=22, green=27, blue=17)
 
 COLORS = {
     "OFF":     (0, 0, 0),
-    "GREEN":   (0, 1, 0),
+    "GREEN":   (0, 0.1, 0),
     "BLUE":    (0, 0, 1),
     "YELLOW":  (1, 1, 0),
     "CYAN":    (0, 1, 1),
@@ -27,7 +27,14 @@ def is_active(unit: str) -> bool:
 
 
 PATTERNS = {
-    "BOOTING":  [("MAGENTA", 0.2), ("OFF", 0.2)],  
+    "BOOTING":  [
+        ("RED", 0.2), ("OFF", 0.1),
+        ("YELLOW", 0.2), ("OFF", 0.1),
+        ("GREEN", 0.2), ("OFF", 0.1),
+        ("CYAN", 0.2), ("OFF", 0.1),
+        ("BLUE", 0.2), ("OFF", 0.1),
+        ("MAGENTA", 0.2), ("OFF", 0.1),
+    ],  
     "CHECKING": [("BLUE", 0.15), ("OFF", 0.15)],   
     "OK":       [("GREEN", 1.0)],                     
     "ERROR":    [("RED", 0.15), ("OFF", 0.15)],         
@@ -76,6 +83,7 @@ def run():
 
 def handle_exit(signum, frame):
     led.off()
+    led.close()
     sys.exit(0)
 
 signal.signal(signal.SIGTERM, handle_exit)
