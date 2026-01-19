@@ -1,1 +1,1 @@
-`![Status LED demo](docs/boot_sheme.gif)`
+Demo in docs-folder
