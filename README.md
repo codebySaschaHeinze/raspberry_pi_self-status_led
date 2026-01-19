@@ -1,1 +1,1 @@
-`![Status LED demo](mp4/boot_sheme.mp4)`
+`![Status LED demo](docs/boot_sheme.gif)`
