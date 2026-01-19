@@ -28,12 +28,8 @@ def is_active(unit: str) -> bool:
 
 PATTERNS = {
     "BOOTING":  [
-        ("RED", 0.2), ("OFF", 0.1),
-        ("YELLOW", 0.2), ("OFF", 0.1),
-        ("GREEN", 0.2), ("OFF", 0.1),
-        ("CYAN", 0.2), ("OFF", 0.1),
-        ("BLUE", 0.2), ("OFF", 0.1),
-        ("MAGENTA", 0.2), ("OFF", 0.1),
+        ("MAGENTA", 0.3), ("OFF", 0.3),
+        
     ],  
     "CHECKING": [("BLUE", 0.15), ("OFF", 0.15)],   
     "OK":       [("GREEN", 1.0)],                     
