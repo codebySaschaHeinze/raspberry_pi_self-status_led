@@ -1,0 +1,1 @@
+`![Status LED demo](mp4/boot_sheme.mp4)`
